@@ -67,24 +67,28 @@ document.addEventListener("keydown", function(e) {
             let auKeyE = new Audio("./sound/black_keys/E.mp3");
             auKeyE.play().then(r => {
                 document.getElementById("quote").innerHTML = "The 'E' key is pressed.";
+                document.getElementById("keyE").style.boxShadow = "0 0 0 0";
             });
             break;
         case "KeyT":
             let auKeyT = new Audio("./sound/black_keys/T.mp3");
             auKeyT.play().then(r => {
                 document.getElementById("quote").innerHTML = "The 'T' key is pressed.";
+                document.getElementById("keyT").style.boxShadow = "0 0 0 0";
             });
             break;
         case "KeyY":
             let auKeyY = new Audio("./sound/black_keys/Y.mp3");
             auKeyY.play().then(r => {
                 document.getElementById("quote").innerHTML = "The 'Y' key is pressed.";
+                document.getElementById("keyY").style.boxShadow = "0 0 0 0";
             });
             break;
         case "KeyU":
             let auKeyU = new Audio("./sound/black_keys/W.mp3");
             auKeyU.play().then(r => {
                 document.getElementById("quote").innerHTML = "The 'U' key is pressed.";
+                document.getElementById("keyU").style.boxShadow = "0 0 0 0";
             });
             break;
         default:
@@ -117,8 +121,24 @@ document.addEventListener("keyup", function(e) {
         case "KeyJ":
             document.getElementById("keyJ").style.backgroundColor = "white"
             break;
+        //Black keys
+        case "KeyW":
+            document.getElementById("keyW").style.boxShadow = "0 0 5px 2px whitesmoke";
+            break;
+        case "KeyE":
+            document.getElementById("keyE").style.boxShadow = "0 0 5px 2px whitesmoke";
+            break;
+        case "KeyT":
+            document.getElementById("keyT").style.boxShadow = "0 0 5px 2px whitesmoke";
+            break;
+        case "KeyY":
+            document.getElementById("keyY").style.boxShadow = "0 0 5px 2px whitesmoke";
+            break;
+        case "KeyU":
+            document.getElementById("keyU").style.boxShadow = "0 0 5px 2px whitesmoke";
+            break;
         default:
-            document.getElementById("quote").innerHTML = "The key is pressed incorrectly.";
+            document.getElementById("quote").innerHTML = "Press key.";
             break;
     }
 });

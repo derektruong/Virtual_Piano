@@ -1,73 +1,134 @@
 body {
-    background-color: #175676;
+  background-image: url("./bgr.jpg");
+  /* background-color: #175676; */
 }
 
 #quote {
-    color: white;
-    text-align: center;
-    position: relative;
-    font-style: italic;
-    font-size: 2.5em;
-    width: 100vw;
-    margin: 100px auto;
-    line-height: 10px;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-style: italic;
+  font-size: 2.5em;
+  width: 100vw;
+  margin: 100px auto;
+  line-height: 10px;
 }
 
 div.container {
-    text-align: center;
-    margin-top: 40vh;
+  position: relative;
+  /* background-color:aquamarine; */
+  /* min-width: 35vmax; */
+  width: 40vw;
+  height: 30vh;
+  text-align: center;
+  left: 30%;
+  top: 200px;
 }
 
 div.white-keys kbd {
-    background-color: white;
-    position: relative;
-    font-family: "Segoe", monospace;
-    font-size: 3em;
-    width: 30vw;
-    height: 20vh;
-    padding: 20vh 25px 5vh;
-    border: 5px solid gray;
-    border-radius: 7px;
-    margin: -2px;
+  background-color: white;
+  position: relative;
+  font-family: "Segoe", monospace;
+  font-size: 3em;
+  width: 30vw;
+  height: 20vh;
+  top: 0;
+  padding: 20vh 25px 5vh;
+  /* border-top: 0; */
+  border: 3px solid gray;
+  border-radius: 7px;
+  margin: -2px;
 }
 
 div.black-keys kbd {
-    background-color: black;
-    display: inline-block;
-    box-shadow: 0 0 5px 3px darkgrey;
-    color: white;
-    position: relative;
-    font-family: "Segoe", monospace;
-    font-size: 2.5em;
-    width: 1.5vw;
-    height: 2vh;
-    padding: 10vh 15px 3vh;
-    top: -26.8vh;
-    left: 0.2vw;
-    margin: 0 15px 0;
+  background-color: black;
+  display: inline-block;
+  box-shadow: 0 0 5px 3px darkgrey;
+  color: rgb(255, 208, 0);
+  position: relative;
+  font-family: "Segoe", monospace;
+  font-size: 2.5em;
+  text-align: center;
+  width: 1.2vw;
+  height: 2vh;
+  bottom: 26.8vh;
+  padding: 70px 15px 30px;
+  left: 0.2vw;
+  margin: 0 15px 0;
+  z-index: 1;
 }
 
 kbd#keyEmp {
-    opacity: 0;
+  opacity: 0;
 }
 
-/*kbd#keyW {*/
-/*    left: -7vw;*/
-/*}*/
+kbd#keyT,
+kbd#keyY,
+kbd#keyU {
+  position: relative;
+  left: -2px;
+}
 
-/*kbd#keyE {*/
-/*    left: -3.9vw;*/
-/*}*/
+.muzieknootjes {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+  height: 200px;
+  border: 0px solid #fff;
+}
 
-/*kbd#keyU {*/
-/*    left: 7.5vw;*/
-/*}*/
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4 {
+  position: absolute;
+  color: rgb(197, 228, 88);
+  animation: notes 2s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+}
 
-/*kbd#keyY {*/
-/*    left: 5.5vw;*/
-/*}*/
+.noot-1 {
+  top: 60px;
+  left: 0;
+  animation-delay: 0.5s;
+}
 
-/*kbd#keyT {*/
-/*    left: 3.5vw;*/
-/*}*/
+.noot-2 {
+  top: 30px;
+  left: 30%;
+  animation-delay: 1s;
+}
 
+.noot-3 {
+  top: 90px;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+.noot-4 {
+  top: 40px;
+  left: 90%;
+  animation-delay: 2s;
+}
+
+@keyframes notes {
+  0% {
+	transform: scale(1) translate(0, 0);
+	opacity: 0;
+  }
+  50% {
+	opacity: 1;
+	transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+	opacity: 0;
+	transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+	transform: scale(1.5) translate(100%, -100%);
+	opacity: 0;
+  }
+}
